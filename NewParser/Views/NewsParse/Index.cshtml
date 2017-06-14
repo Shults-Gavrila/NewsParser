@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/NewsParser.css" rel="stylesheet" type="text/css" />
+<div class="list-group">
+    @{ 
+        
+        var newslist = ViewBag.newsList;
+        for (int i =0; i < newslist.Count; i++)
+        {
+                <a class="list-group-item" href="/NewsParse/getDetail?url=@newslist[i].alt_url">
+                    @if (newslist[i].url != "")
+                    {
+                        <img src="@newslist[i].url" class="img-rounded preshowImage" />
+                    }
+                    <p>@newslist[i].text</p>
+                </a>
+        }
+
+    }
+</div>

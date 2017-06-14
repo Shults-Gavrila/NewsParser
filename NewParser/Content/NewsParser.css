@@ -1,0 +1,15 @@
+﻿
+.thumbnail-img {
+    height: 200px;
+    background-size: cover;
+}
+.preshowImage{
+    width : 200px;
+}
+.video__end-slate__secondary {
+    display:none;
+}
+
+.video__end-slate__tertiary-title {
+    display : none;
+}

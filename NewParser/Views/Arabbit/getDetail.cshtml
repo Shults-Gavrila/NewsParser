@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "getDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Arabbit.css" type="text/css" rel="stylesheet" />
+<div style="background-image : @ViewBag.srcImg" class="article-image"></div>
+
+<div>
+    @Html.Raw(ViewBag.hText);
+</div>
