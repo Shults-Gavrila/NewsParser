@@ -54,7 +54,13 @@ namespace NewParser.Controllers
             string article = dom.Find("#article_body").Eq(0).RenderSelection().ToString();
             if ( article.Length == 0)
             {
-                article = dom.Find(".cnbc-body").Eq(0).RenderSelection().ToString();
+                ViewBag.title = "";
+                CQ aBody = dom.Find(".cnbc-body").Eq(0);
+                //article = aBody.Remove(".franchise_content").RenderSelection().ToString();
+                //article = article.Replace("data-img-src", "src");
+                article = aBody.Children().Eq(2).RenderSelection().ToString();
+                article += aBody.Children().Eq(3).RenderSelection().ToString();
+                article = article.Replace("data-img-src", "src");
             }
             ViewBag.text = article;
             return View();

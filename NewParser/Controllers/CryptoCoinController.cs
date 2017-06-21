@@ -35,7 +35,10 @@ namespace NewParser.Controllers
             CQ dom = CQ.CreateFromUrl(url);
             CQ article = dom.Find("article.post").Eq(0);
             CQ aMain = article.Children("div.entry-content").Eq(0);
-
+            CQ ads= aMain.Find("div.mobile");
+            ads.Remove();
+            CQ entry = aMain.Find("div.entry-meta");
+            entry.Remove();
             string hText = aMain.RenderSelection().ToString();
 
             CQ img = dom.Find("div.site-header-bg").Eq(0);
