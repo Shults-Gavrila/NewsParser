@@ -1,10 +1,15 @@
-﻿
+﻿img {
+    max-width: 800px;
+}
 .thumbnail-img {
     height: 200px;
     background-size: cover;
 }
 .preshowImage{
     width : 200px;
+    height : 200px;
+    background-repeat : no-repeat;
+    background-size : contain;
 }
 .video__end-slate__secondary {
     display:none;

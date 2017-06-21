@@ -3,8 +3,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="~/Content/NewsParser.css" rel="stylesheet" type="text/css" />
+
 <h1>@ViewBag.title</h1>
 
 <div>
-    @Html.Raw(ViewBag.text);
+    @Html.Raw(ViewBag.text)
 </div>
